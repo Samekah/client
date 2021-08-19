@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { UserForm } from "../../components";
+import { UserForm, Countdown } from "../../components";
 
 function WelcomePage() {
   return (
     <>
       <UserForm />
+      {/* <Countdown sec={10} /> */}
     </>
   );
 }

@@ -22,6 +22,8 @@ io.on('connection', socket => {
     // send event to all clients
     io.emit('admin-message', `There is ${participantCount} x friend here now!`)
 
+    io.emit('number-emit', `${participantCount}`)
+
 
     socket.on("disconnect", socket => { // runs when client disconnects
         console.log("K bye then");

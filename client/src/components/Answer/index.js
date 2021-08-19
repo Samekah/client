@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { submitAnswer } from "../../actions";
-import Transition from "../Transition";
 import "./style.css";
 
 const Answer = ({ word }) => {
@@ -20,5 +19,4 @@ const Answer = ({ word }) => {
     </button>
   );
 };
-
 export default Answer;

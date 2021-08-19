@@ -95,6 +95,7 @@ const initState = {
   // result: [{ question: "", correctAnswer: "", incorrectAnswers: [] }],
 
   score: 0,
+  userNum: 0,
 };
 
 const questionReducer = (state = initState, action) => {
@@ -105,6 +106,8 @@ const questionReducer = (state = initState, action) => {
       return { ...state, username: action.payload, error: false };
     case "ADD_DIFFICULTY":
       return { ...state, difficulty: action.payload, error: false };
+    case "ADD_USER_NUM":
+      return { ...state, userNum: action.payload, error: false };
     case "ANSWER_SUBMIT":
       if (action.payload === state.result[state.questionIndex].correctAnswer) {
         return { ...state, score: state.score + 1, questionIndex: state.questionIndex + 1 };
