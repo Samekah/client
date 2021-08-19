@@ -77,5 +77,16 @@ https://
 
 
 ### Bugs
-- Every user result gets saved in the DB twice
+
+- Every user result gets saved in the DB twice (only in development)
 - Not all quiz text is reformatted to get rid of special/foreign characters
+
+
+### Future features
+
+- Add ability to create a dedicated "lobby" for up to four players using socket.io
+- Change answer button colour depending on whether the answer is correct or wrong, after click
+- Improve "separation of concerns" in JavaScript and React files
+- Increase test coverage
+- Add animations
+

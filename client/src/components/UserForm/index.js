@@ -48,7 +48,7 @@ function UserForm() {
     return (
         <>
             {reset()}
-            <div className='border rounded-xl bg-white  mt-20 w-11/12 h-auto m-auto px-10 py-5 shadow-xl flex flex-col justify-center text-center mb-10'>
+            <div className=' rounded-xl bg-white  mt-20 w-11/12 h-auto m-auto px-10 py-5 shadow-xl flex flex-col justify-center text-center mb-10'>
                 <div className='flex flex-col justify-center'>
                     <img src={logo} class='w-20 mx-auto'></img>
                     <h1 className='text-center text-4xl font-extrabold'>Quizzo</h1>

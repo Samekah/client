@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-shadow: 0 0 1px #ffb97a; */
+  text-decoration: underline;
+}
+
+/* .current {
+    /* color: white;
+    font-weight: bolder; */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul {
+  margin-top: 14;
+  margin-right: 16;
+  padding: 0;
+  list-style: none;
+}
+
+ul a {
+  font-family: "Heebo", sans-serif;
+  color: white;
+  margin-left: 17px;
+}
+
+#logo {
+  fill: #ffffff;
+}
+
+#logo:hover {
+  /* fill: #ffb97a;  */
+  stroke: #ffb97a;
+  stroke-width: 36;
+}
