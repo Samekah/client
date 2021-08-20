@@ -43,7 +43,7 @@ function UserForm() {
   return (
     <>
       {reset()}
-      <div className=' rounded-xl bg-white  mt-20 w-11/12 h-auto m-auto px-10 py-5 shadow-xl flex flex-col justify-center text-center mb-10'>
+      <div role="formContainer" className=' rounded-xl bg-white  mt-20 w-11/12 h-auto m-auto px-10 py-5 shadow-xl flex flex-col justify-center text-center mb-10'>
         <div className='flex flex-col justify-center'>
           <img alt='Quizzo Logo' src={logo} class='w-20 mx-auto'></img>
           <h1 className='text-center text-4xl font-extrabold'>Quizzo</h1>
@@ -61,12 +61,14 @@ function UserForm() {
             onMouseOut={(e) => (e.target.placeholder = "Enter a username...")}
             value={username}
             onChange={updateUsername}
+            role="username"
             required
           />
           <label className=' text-xl mt-8' htmlFor='categorySelect'>
             Category:
           </label>
           <select
+            role="categoryDropDown"
             defaultValue={"DEFAULT"}
             className=' text-xl shadow border rounded-md w-full py-2 px-3 text-gray-700 mt-1 leading-tight  outline-none focus:outline-none focus-within:border-blue-400 transition-all duration-500 focus:border'
             name='category'
@@ -99,7 +101,7 @@ function UserForm() {
             required
             onChange={sendDifficulty}
           >
-            <option value='DEFAULT' disabled>
+            <option role="diffDropDown" value='DEFAULT' disabled>
               Choose a Difficulty
             </option>
             <option value='easy'>Easy</option>
