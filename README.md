@@ -12,6 +12,7 @@
 ### Deployment:
 
 https://quizzo-app.netlify.app/ (client)
+
 http://13.59.11.193:5001/ (server)
 
 
@@ -30,6 +31,7 @@ http://13.59.11.193:5001/ (server)
 - socket.io
 - Netlify
 - AWS
+- 
 
 ### Functionality:
 
