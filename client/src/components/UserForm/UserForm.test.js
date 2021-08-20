@@ -47,6 +47,7 @@ describe("SearchForm layout", () => {
   test("it displays the 'New Game'button", () => {
     expect(screen.getByText("Submit")).toBeInTheDocument();
   });
+  
 });
 
 describe("SearchForm", () =>{
@@ -88,6 +89,31 @@ describe("SearchForm", () =>{
     renderWithReduxProvider(<UserForm />, { initState });
     let form = screen.getByRole('form');
     expect(form).toBeInTheDocument();
+  });
+
+  
+  test("it renders the form div", () => {
+    renderWithReduxProvider(<UserForm />);
+    const formDiv = screen.getByRole("formContainer");
+    expect(formDiv).toBeInTheDocument();
+  });
+
+  test("it renders the username field", () => {
+    renderWithReduxProvider(<UserForm />);
+    const usernameTextbox = screen.getByRole("username");
+    expect(usernameTextbox).toBeInTheDocument();
+  });
+
+  test("it renders the category drop down menu", () => {
+    renderWithReduxProvider(<UserForm />);
+    const categoryDropDown = screen.getByRole("categoryDropDown");
+    expect(categoryDropDown).toBeInTheDocument();
+  });
+
+  test("it renders the difficulty drop down menu", () => {
+    renderWithReduxProvider(<UserForm />);
+    const diffDropDown = screen.getByRole("diffDropDown");
+    expect(diffDropDown).toBeInTheDocument();
   });
 
 })

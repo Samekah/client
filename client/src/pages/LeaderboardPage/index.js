@@ -63,7 +63,7 @@ const Leaderboard = () => {
   return (
     <>
 
-      <div className='border rounded-xl bg-white  mt-20 w-11/12 h-5/6 m-auto px-10 py-5 shadow-xl flex flex-col justify-center text-center'>
+      <div role="leaderboard" className='border rounded-xl bg-white  mt-20 w-11/12 h-5/6 m-auto px-10 py-5 shadow-xl flex flex-col justify-center text-center'>
         <h1 className=''>Quizzo Leaderboard </h1>
 
         <table className=" w-full mt-6 mx-auto table text-black border-separate space-y-4 z-2">
