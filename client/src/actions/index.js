@@ -13,7 +13,7 @@ export const loadQuiz = (category, difficulty) => {
         target.push({
           question: scrubStr(data.results[i].question),
           correctAnswer: scrubStr(data.results[i].correct_answer),
-          incorrectAnswers: data.results[i].incorrect_answers.map(el => scrubStr(el)),
+          incorrectAnswers: data.results[i].incorrect_answers.map((el) => scrubStr(el)),
         });
         i++;
       }
@@ -30,8 +30,6 @@ export const loadQuiz = (category, difficulty) => {
     }
   };
 };
-
-
 
 export const addUsername = (username) => ({
   type: "ADD_USERNAME",
@@ -55,7 +53,7 @@ export const submitAnswer = (submittedAnswer) => ({
 
 export const resetState = () => ({
   type: "RESET",
-  payload: [0, " ", 0]
+  payload: [0, " ", 0],
 });
 
 // Helper scrubber function

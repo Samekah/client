@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import { WelcomePage, QuestionCurrentPage, Leaderboard, HeadingNavBar } from "./pages";
+import { UserForm } from "./components";
+import { QuestionCurrentPage, Leaderboard, HeadingNavBar } from "./pages";
 
 import "./styles/app.css";
 
@@ -10,7 +11,7 @@ function App() {
       <HeadingNavBar />
       <Switch>
         <Route exact path='/'>
-          <WelcomePage />
+          <UserForm />
         </Route>
         <Route exact path='/QuestionPage'>
           <QuestionCurrentPage />

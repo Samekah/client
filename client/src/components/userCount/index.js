@@ -11,7 +11,9 @@ const UserCount = () => {
 
   return (
     <>
-      <p className='mt-5'>Join the {count} Quizzo's playing right now! </p>
+      <p role='userCount' className='mt-5'>
+        Join the {count} Quizzo's playing right now!{" "}
+      </p>
     </>
   );
 };

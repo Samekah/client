@@ -61,7 +61,10 @@ const QuestionCurrentPage = () => {
     ]);
 
     return (
-      <div className='rounded-xl bg-purple-darker  mt-20 w-11/12 h-5/6 m-auto shadow-xl flex flex-col justify-center text-center text-white transform rotate-6'>
+      <div
+        role='questionPage'
+        className='rounded-xl bg-purple-darker  mt-20 w-11/12 h-5/6 m-auto shadow-xl flex flex-col justify-center text-center text-white transform rotate-6'
+      >
         <Countdown date={Date.now() + 3000} key={countdownKey} className='transform -rotate-6 text-4xl'>
           <div className='rounded-xl bg-white w-full h-auto m-auto shadow-xl text-black transform -rotate-6'>
             <div className='mt-5 flex flex-row justify-around'>
@@ -101,6 +104,8 @@ const QuestionCurrentPage = () => {
               <div className='pb-5 mx-10'>
                 {answers.map((t, i) => (
                   <button
+                    role='button'
+                    name='answerButton'
                     className='border mx-auto mt-5 w-5/6 md:w-2/3 md:text-xl h-auto px-4 py-1 rounded-full bg-purple-darker text-white'
                     onClick={sendAnswer}
                     value={t}
@@ -124,7 +129,9 @@ const QuestionCurrentPage = () => {
           <br></br>
           <h3 className=' '>Final Score: {currentScore} /10 </h3>
           <br></br>
-          <h5><i>Scores will be adjusted with a multiplier of 1.6 for "hard" and 1.3 for "medium" quiz</i></h5>
+          <h5>
+            <i>Scores will be adjusted with a multiplier of 1.6 for "hard" and 1.3 for "medium" quiz</i>
+          </h5>
           <br></br>
 
           <button className='border mx-auto px-4 py-1 rounded-full bg-purple-500 text-white' onClick={goHome}>

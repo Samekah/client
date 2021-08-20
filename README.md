@@ -11,13 +11,14 @@
 
 ### Deployment:
 
-https://
+https://quizzo-app.netlify.app/
 
 
 ### Technologies:
 
 - HTML5
 - CSS3
+- Figma
 - Tailwind CSS
 - JavaScript
 - React.js
@@ -26,6 +27,8 @@ https://
 - Node.js/Express.js
 - PostgreSQL
 - socket.io
+- Netlify
+- AWS
 
 ### Functionality:
 
@@ -61,13 +64,22 @@ https://
 - Teardown - to stop and remove all artifacts, run **docker-compose down --volumes --remove-orphans**
 
 
+## API endpoints
+
+| Route name | Path                                   | Method        | Purpose |
+| ---------- | ---------------------------------------| ------------- | ------- |
+| create     | `/leaderboard`                         | `POST`        | Working |
+| read       | `/leaderboard`                         | `GET`         | Working |
+
+
 ### Wins
 
 - App is working smoothly
-- socket.io displays number of current users
+- socket.io displays number of users online
 - Design is eye-catching and creative
 - Successful and enjoyable teamwork
 - Tailwind CSS is a pleasure to work with and saves time
+- Test coverage is at 50% front-end and xx% back-end
 
 
 ### Challenges
@@ -89,4 +101,3 @@ https://
 - Improve "separation of concerns" in JavaScript and React files
 - Increase test coverage
 - Add animations
-
