@@ -11,7 +11,8 @@
 
 ### Deployment:
 
-https://quizzo-app.netlify.app/
+https://quizzo-app.netlify.app/ (client)
+http://13.59.11.193:5001/ (server)
 
 
 ### Technologies:
@@ -64,6 +65,15 @@ https://quizzo-app.netlify.app/
 - Teardown - to stop and remove all artifacts, run **docker-compose down --volumes --remove-orphans**
 
 
+### Installation & Usage - socket.io
+
+- Clone or download the [Socket repo](https://github.com/Team-Connect-4/Socket)
+- Open terminal and navigate to the repo folder
+- Run **npm install** to get the Node Modules, wait for them to be installed
+- Run **npm run start** to fire up sockets
+- Socket will run on port 5001 - you will see this info in the terminal along with the greeting "Ello, who's this we got here?"
+
+
 ## API endpoints
 
 | Route name | Path                                   | Method        | Purpose |
@@ -75,23 +85,19 @@ https://quizzo-app.netlify.app/
 ### Wins
 
 - App is working smoothly
+- MVP functionality
 - socket.io displays number of users online
 - Design is eye-catching and creative
 - Successful and enjoyable teamwork
-- Tailwind CSS is a pleasure to work with and saves time
-- Test coverage is at 50% front-end and xx% back-end
+- Tailwind CSS is a pleasure to work with and helps responsiveness
+- Test coverage is at 55%
+- Successful string scrubbing to convert HTML entities like “&ldquo;”, “&hellip;” etc
 
 
 ### Challenges
 
 - Implementing Redux took longer that expected as we were all quite new to it
-- We did not have enough time to use full socket.io functionality to create a multiplayer "lobby"
-
-
-### Bugs
-
-- Every user result gets saved in the DB twice (only in development)
-- Not all quiz text is reformatted to get rid of special/foreign characters
+- React testing
 
 
 ### Future features
@@ -100,4 +106,3 @@ https://quizzo-app.netlify.app/
 - Change answer button colour depending on whether the answer is correct or wrong, after click
 - Improve "separation of concerns" in JavaScript and React files
 - Increase test coverage
-- Add animations
