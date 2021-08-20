@@ -31,7 +31,7 @@ http://13.59.11.193:5001/ (server)
 - socket.io
 - Netlify
 - AWS
-- 
+
 
 ### Functionality:
 
