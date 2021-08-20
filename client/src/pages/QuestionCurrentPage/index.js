@@ -29,7 +29,7 @@ const QuestionCurrentPage = () => {
     };
 
     axios
-      .post("http://localhost:8080/leaderboard", req)
+      .post("/api/*", req)
       .then((response) => {
         console.log(response);
       })
