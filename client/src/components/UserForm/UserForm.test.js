@@ -2,26 +2,32 @@ import UserForm from ".";
 import { screen, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-describe("SearchForm", () => {
+describe("SearchForm layout", () => {
+
   beforeEach(() => {
     renderWithReduxProvider(<UserForm />);
   });
+
   test("it renders a form", () => {
     let form = screen.getByRole("form");
     expect(form).toBeInTheDocument();
   });
+
   test("Placeholder text exists", () => {
     let placeHolderInput = screen.getByPlaceholderText("Enter Username");
     expect(placeHolderInput).toBeInTheDocument();
   });
+
   test("Username label exists", () => {
     let usernameInput = screen.getByLabelText("Username:");
     expect(usernameInput).toBeInTheDocument();
   });
+
   test("Difficult Label exists", () => {
     let difficultyInput = screen.getByLabelText("Category:");
     expect(difficultyInput).toBeInTheDocument();
   });
+
   test("Category Label exists", () => {
     let categoryInput = screen.getByLabelText("Difficulty:");
     expect(categoryInput).toBeInTheDocument();
@@ -42,3 +48,46 @@ describe("SearchForm", () => {
     expect(screen.getByText("Submit")).toBeInTheDocument();
   });
 });
+
+describe("SearchForm", () =>{
+  
+  let initState;
+  
+  beforeEach(()=>{
+    initState = {
+      loading: false,
+      questionIndex: 0,
+      username: "",
+      category: "",
+      difficulty: "",
+      result: [{ question: "", correctAnswer: "", incorrectAnswers: [] }],
+      score: 0,
+      userNum: 0,
+    };
+  })
+
+  test('it renders a form with no users in state', () => {
+    renderWithReduxProvider(<UserForm />, { initState });
+    let form = screen.getByRole('form');
+    expect(form).toBeInTheDocument();
+  });
+
+  test('it renders a form with a question Index of 0 in state', () => {
+    renderWithReduxProvider(<UserForm />, { initState });
+    let form = screen.getByRole('form');
+    expect(form).toBeInTheDocument();
+  });
+
+  test('it renders a form with no ites in the results array in state', () => {
+    renderWithReduxProvider(<UserForm />, { initState });
+    let form = screen.getByRole('form');
+    expect(form).toBeInTheDocument();
+  });
+
+  test('it renders a form with a value of 0 in state', () => {
+    renderWithReduxProvider(<UserForm />, { initState });
+    let form = screen.getByRole('form');
+    expect(form).toBeInTheDocument();
+  });
+
+})

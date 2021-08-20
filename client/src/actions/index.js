@@ -9,14 +9,14 @@ export const loadQuiz = (category, difficulty) => {
 
       const target = [];
       let i = 0;
-      while (i < 10) {
-        target.push({
-          question: scrubStr(data.results[i].question),
-          correctAnswer: scrubStr(data.results[i].correct_answer),
-          incorrectAnswers: data.results[i].incorrect_answers.map((el) => scrubStr(el)),
-        });
-        i++;
-      }
+      // while (i < 10) {
+      //   target.push({
+      //     question: scrubStr(data.results[i].question),
+      //     correctAnswer: scrubStr(data.results[i].correct_answer),
+      //     incorrectAnswers: data.results[i].incorrect_answers.map((el) => scrubStr(el)),
+      //   });
+      //   i++;
+      // }
       dispatch({
         type: "LOAD_QUIZ",
         payload: target,
