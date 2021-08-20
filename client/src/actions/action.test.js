@@ -52,3 +52,39 @@ describe("Question Actions", () => {
     expect(store.getActions()).toEqual(expectedActions);
   });
 });
+
+// Breaks at string replaceAll function
+// describe("async action tests", () =>{
+
+//   let store;
+//   let stringAll;
+
+//   beforeEach(()=>{
+//     // stringAll = jest.fn();
+//     stringAll = jest.fn();
+//     store = mockStore({});
+//     store.clearActions();
+//   })
+
+//   it("loads data from trivia api", () =>{
+
+//     const result = {results:
+//                             [
+//                               {
+//                                 question: "this is a question",
+//                                 correctAnswer: "yes",
+//                                 incorrectAnswers: [ "no", "1", "2" ]
+                                
+//                               }
+//                             ]
+//                     }
+//     const expectedActions = [{ type: "LOAD_QUIZ", payload: result }]
+
+//     axios.get.mockImplementationOnce(()=> Promise.resolve({data: result}));
+
+//     return store.dispatch(loadQuiz(9, "easy"))
+//                 .then(() => {
+//                   expect(store.getActions()).toEqual(expectedActions)
+//                 })
+//   })
+// })
