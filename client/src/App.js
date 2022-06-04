@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Switch, Route } from 'react-router-dom';
-import { Header } from "./layout/Header";
+import { Header } from "./layout";
 import { QuestionPage, WelcomePage, QuestionCurrentPage } from "./pages";
 import "./styles/app.css";
 
