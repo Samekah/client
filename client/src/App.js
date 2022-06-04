@@ -1,20 +1,23 @@
-import React, { useState } from "react";
-import { Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
 import { Header } from "./layout";
-import { QuestionPage, WelcomePage, QuestionCurrentPage } from "./pages";
+import { WelcomePage, QuestionCurrentPage, Leaderboard } from "./pages";
 import "./styles/app.css";
 
 function App() {
   return (
     <>
       <Header />
-      <Switch >
-        <Route exact path="/">
+
+      <Switch>
+        <Route exact path='/'>
           <WelcomePage />
         </Route>
-        <Route exact path="/QuestionPage">
+        <Route exact path='/QuestionPage'>
           <QuestionCurrentPage />
-          {/* <QuestionPage /> */}
+        </Route>
+        <Route exact path='/Leaderboard'>
+          <Leaderboard />
         </Route>
       </Switch>
     </>

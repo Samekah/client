@@ -11,9 +11,9 @@ export const loadQuiz = (category, difficulty) => {
       let i = 0;
       while (i < 10) {
         target.push({
-          question: data.results[i].question,
-          correctAnswer: data.results[i].correct_answer,
-          incorrectAnswers: data.results[i].incorrect_answers,
+          question: scrubStr(data.results[i].question),
+          correctAnswer: scrubStr(data.results[i].correct_answer),
+          incorrectAnswers: data.results[i].incorrect_answers.map(el => scrubStr(el)),
         });
         i++;
       }
@@ -31,9 +31,21 @@ export const loadQuiz = (category, difficulty) => {
   };
 };
 
+
+
 export const addUsername = (username) => ({
   type: "ADD_USERNAME",
   payload: username,
+});
+
+export const addUserNum = (userNum) => ({
+  type: "ADD_USER_NUM",
+  payload: userNum,
+});
+
+export const updateDifficulty = (difficulty) => ({
+  type: "ADD_DIFFICULTY",
+  payload: difficulty,
 });
 
 export const submitAnswer = (submittedAnswer) => ({
@@ -43,7 +55,7 @@ export const submitAnswer = (submittedAnswer) => ({
 
 export const resetState = () => ({
   type: "RESET",
-  payload: [0, " ", 0 ]
+  payload: [0, " ", 0]
 });
 
 // Helper scrubber function
@@ -56,7 +68,7 @@ export const scrubStr = (str) => {
   return cleanStr;
 };
 
-//Helper Shuffle function - not working
+//Helper Shuffle function:
 export const shuffle = (arr) => {
   let c = arr.length;
   let rand;

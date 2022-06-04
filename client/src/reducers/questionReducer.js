@@ -1,9 +1,9 @@
 const initState = {
   loading: false,
   questionIndex: 0,
-  username: "",
+  username: "polina",
   category: "",
-  difficulty: "",
+  difficulty: "easy",
 
   result: [
     {
@@ -93,7 +93,9 @@ const initState = {
   ],
 
   // result: [{ question: "", correctAnswer: "", incorrectAnswers: [] }],
+
   score: 0,
+  userNum: 0,
 };
 
 const questionReducer = (state = initState, action) => {
@@ -102,13 +104,23 @@ const questionReducer = (state = initState, action) => {
       return { ...state, result: action.payload, error: false };
     case "ADD_USERNAME":
       return { ...state, username: action.payload, error: false };
+    case "ADD_DIFFICULTY":
+      return { ...state, difficulty: action.payload, error: false };
+    case "ADD_USER_NUM":
+      return { ...state, userNum: action.payload, error: false };
     case "ANSWER_SUBMIT":
       if (action.payload === state.result[state.questionIndex].correctAnswer) {
         return { ...state, score: state.score + 1, questionIndex: state.questionIndex + 1 };
       }
       return { ...state, questionIndex: state.questionIndex + 1 };
     case "RESET":
-      return { ...state, questionIndex: action.payload[0], username: action.payload[1], score: action.payload[2], error: false };
+      return {
+        ...state,
+        questionIndex: action.payload[0],
+        username: action.payload[1],
+        score: action.payload[2],
+        error: false,
+      };
     case "SET_ERROR":
       return { ...state, error: action.payload };
 
@@ -116,11 +128,5 @@ const questionReducer = (state = initState, action) => {
       return state;
   }
 };
-
-// type: "LOAD_QUIZ",
-// payload: [{question: "What is my name?", correctAnswer:"Humza", incorrectAnswers:["Shav", "Polina", "Sammie"]}]
-
-// type: "ANSWER_SUBMIT",
-// payload: "Humza"
 
 export default questionReducer;

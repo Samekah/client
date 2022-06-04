@@ -1,0 +1,25 @@
+table tbody tr td {
+  text-align: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+tr td:nth-child(n + 4),
+tr th:nth-child(n + 4) {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+
+tr td:nth-child(1),
+tr th:nth-child(1) {
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.bg-purple-darker {
+  --tw-bg-opacity: 1;
+  background-color: rgba(105, 48, 195, var(--tw-bg-opacity));
+}
+
+.bg-blue-lighter {
+  --tw-bg-opacity: 1;
+  background-color: rgba(128, 255, 219, var(--tw-bg-opacity));
+}
