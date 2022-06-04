@@ -62,7 +62,11 @@ export const scrubStr = (str) => {
     .replaceAll("&quot;", '"')
     .replaceAll("&#039;", "'")
     .replaceAll("&eacute;", "e")
-    .replaceAll("&amp; ", " & ");
+    .replaceAll("&amp;", " & ")
+    .replaceAll("&ldquo;", '"')
+    .replaceAll("&rsquo;", "'")
+    .replaceAll("&rdquo;", '"')
+    .replaceAll("&hellip;", " ... ");
   return cleanStr;
 };
 
